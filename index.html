@@ -19,6 +19,7 @@
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
             <a class="logo" href="#">Aleesha.</a>
+           
             <ul class="nav">
                 <li class="item">
                     <a class="link" href="#home">Home</a>
@@ -37,11 +38,44 @@
             </ul>
             <a href="javascript:void(0)" id="nav-toggle" class="hamburger hamburger--elastic">
                 <div class="hamburger-box">
-                    <div class="hamburger-inner"></div>
+                    <div class="hamburger-inner">
+                    </div>
                 </div>
             </a>
         </div>
-    </nav><!-- End of Page Navbar -->
+    </nav>
+
+    <!-- <nav class="navbar navbar-expand-lg bg-white shadow py-3 sticky-top" >
+        <div class="container">
+            <a class="logo" href="#">Aleesha.</a>
+          
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="item">
+                        <a class="link" href="#home">Home</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#about">About</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="item">
+                        <a class="link" href="#contact">Contact</a>
+                    </li>
+                
+                </ul>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+             
+            </div>
+        </div>
+    </nav> -->
+
+    <!--   End of Page Navbar -->
 
     <!-- page header -->
     <header id="home" class="header">
@@ -172,12 +206,13 @@
 
 
     <!-- contact section -->
-    <section class="section" id="contact">
+
+    <!-- <section class="section" id="contact">
         <div class="container text-center">
             <p class="section-subtitle">How can you communicate?</p>
-            <h6 class="section-title mb-5">Contact Me</h6>
+            <h6 class="section-title mb-5">Contact Me</h6> -->
             <!-- contact form -->
-            <form action="https://script.google.com/macros/s/AKfycbxL4YJdg2e7rN47I5TBCzTsl44oaMXWHRMwpcuazfRmsFWeV2Vacey9HWdeIzzYE-zs/exec" method = "post" onsubmit = "return validateAllFields()" class="contact-form col-md-10 col-lg-8 m-auto">
+            <!-- <form action="https://script.google.com/macros/s/AKfycbxL4YJdg2e7rN47I5TBCzTsl44oaMXWHRMwpcuazfRmsFWeV2Vacey9HWdeIzzYE-zs/exec" method = "post" onsubmit = "return validateAllFields()" class="contact-form col-md-10 col-lg-8 m-auto">
                 <div class="form-row">
                     <div class="form-group col-sm-6">
                         <input type="text" name = "Full Name" id = "name" size="50" class="form-control" placeholder="Your Name" onkeyup="validateName()" required>
@@ -196,9 +231,48 @@
                         <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
                     </div>
                 </div>
-            </form><!-- end of contact form -->
-        </div><!-- end of container -->
-    </section><!-- end of contact section -->
+            </form> -->
+            <!-- end of contact form -->
+        <!-- </div> -->
+        <!-- end of container -->
+    <!-- </section> -->
+
+    <section class="section" id="contact">
+        <div class="container text-center">
+            <p class="section-subtitle">How can you communicate?</p>
+            <h6 class="section-title mb-5">Contact Me</h6>
+            <!-- contact form -->
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form col-md-10 col-lg-8 m-auto">
+                <div class="form-row">
+                    <input type="hidden" name="access_key" value="d0aa13ad-bb4f-4706-9697-a8c7a495ddbd">
+
+                    <div class="form-group col-sm-6">
+                        <input type="text" name = "Full Name" id = "name" size="50" class="form-control" placeholder="Your Name" onkeyup="validateName()" required>
+                        <p id="message1"></p>
+                    </div>
+
+                    <div class="form-group col-sm-6">
+                        <input type="email" name = "Email" id="email" class="form-control" placeholder="Enter Email" onkeyup="validateEmail()" required>
+                        <p id="message2"></p>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <textarea name="Comment" id="comment" rows="6" class="form-control"
+                            placeholder="Write Something" onkeyup="validateWrite()" required></textarea>
+                            <p id="message3"></p>
+                    </div>
+
+                    <div class="form-group col-sm-12 mt-3">
+                        <input type="submit" value="Send Message" class="btn btn-outline-primary rounded">
+                    </div>
+
+                </div>
+            </form>
+            <!-- end of contact form -->
+        </div>
+        <!-- end of container -->
+    </section>
+    <!-- end of contact section -->
 
     <!-- footer -->
     <div class="container">

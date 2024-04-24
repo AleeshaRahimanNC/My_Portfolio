@@ -13,8 +13,8 @@
 */
 
 // smooth scroll
-$(document).ready(function () {
-    $(".navbar .nav-link").on('click', function (event) {
+$(document).ready(function(){
+    $(".navbar .nav-link").on('click', function(event) {
 
         if (this.hash !== "") {
 
@@ -24,18 +24,40 @@ $(document).ready(function () {
 
             $('html, body').animate({
                 scrollTop: $(hash).offset().top
-            }, 700, function () {
+            }, 700, function(){
                 window.location.hash = hash;
             });
-        }
+        } 
     });
 });
 
 // navbar toggle
-$('#nav-toggle').click(function () {
+$('#nav-toggle').click(function(){
     $(this).toggleClass('is-active')
     $('ul.nav').toggleClass('show');
 });
+
+// $(document).ready(function () {
+//     // Smooth scrolling for navigation links excluding those inside the hamburger menu
+//     $(".navbar .nav-link:not(#nav-toggle)").on('click', function (event) {
+//         if (this.hash !== "") {
+//             event.preventDefault();
+//             var hash = this.hash;
+//             $('html, body').animate({
+//                 scrollTop: $(hash).offset().top
+//             }, 700, function () {
+//                 window.location.hash = hash;
+//             });
+//         }
+//     });
+
+//     // Toggle navigation menu when clicking on the hamburger button
+//     $('#nav-toggle').click(function () {
+//         $(this).toggleClass('is-active')
+//         $('ul.nav').toggleClass('show');
+//     });
+// });
+
 
 // contact form...
 
