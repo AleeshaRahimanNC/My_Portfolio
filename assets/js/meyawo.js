@@ -64,7 +64,7 @@ $('#nav-toggle').click(function(){
 //1.your name
 function validateName() {
     let usname = document.getElementById("name").value;
-    let reg = /^[a-zA-Z\S]+$/;
+    let reg = /^[a-zA-Z\S ]+$/;
 
     if (reg.test(usname)) {
         document.getElementById("message1").innerHTML = "verified";
@@ -97,8 +97,10 @@ function validateEmail() {
 //3.write something
 
 function validateWrite() {
-    let comment = document.getElementById("email").value;
-    let reg = /^([a-zA-Z0-9\S]{5,1000}+\.[a-zA-Z0-9\S]{5,1000}+(\r)?(\n)?)+$/;
+    let comment = document.getElementById("comment").value;
+    // let reg = /^([a-zA-Z0-9\S]{5,1000}\.[a-zA-Z0-9\S]{5,1000}(\r)?(\n)?)+$/;
+   
+ let reg =  /^([a-zA-Z0-9\S ]{1,1000}[a-zA-Z0-9\S ]{1,1000}(\r)?(\n)?)+$/;
 
     if (reg.test(comment)) {
         document.getElementById("message3").innerHTML = "verified";
@@ -111,13 +113,14 @@ function validateWrite() {
     }
 }
 
-//4.button
+// //4.button
 
 function validateAllFields() {
     validateName();
     validateEmail();
     validateWrite();
     if (validateName() && validateEmail() && validateWrite()) 
+    // if (validateName() && validateEmail()) 
     {
        return true
     }
